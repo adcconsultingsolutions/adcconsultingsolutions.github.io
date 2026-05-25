@@ -1,3 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADC Consulting Solutions LLC</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --mint: #a8c8be;
+    --mint-light: #d4e8e2;
+    --mint-dark: #7aada0;
+    --gold: #c9a96e;
+    --gold-light: #e8d5b0;
+    --black: #1a1a1a;
+    --charcoal: #2d2d2d;
+    --grey: #6b6b6b;
+    --grey-light: #f5f5f5;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--black);
+    background: var(--white);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--mint-light);
+    padding: 0 48px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    height: 52px;
+    width: auto;
+    display: block;
+  }
+
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: var(--black);
+    text-transform: uppercase;
+  }
+
+  .nav-brand span {
+    color: var(--gold);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 48px 80px;
+    background: linear-gradient(165deg, #f9f9f9 0%, var(--mint-light) 40%, #f0ece4 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -120px; right: -120px;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(168,200,190,0.25) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -80px;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,169,110,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    animation: fadeUp 1s ease both;
+  }
+
+  .hero-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .ornament-line {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold));
+  }
+
+  .ornament-line.right {
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+
+  .ornament-diamond {
+    width: 8px; height: 8px;
+    background: var(--gold);
+    transform: rotate(45deg);
+  }
+
+  .hero-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 7vw, 76px);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: 0.04em;
+    color: var(--black);
+    margin-bottom: 8px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--mint-dark);
+  }
+
+  .hero-tagline {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 16px 0 28px;
+  }
+
+  .hero-bio {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.85;
+    color: var(--grey);
+    max-width: 640px;
+    margin: 0 auto 40px;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    padding: 14px 44px;
+    background: var(--black);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--gold);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .hero-cta:hover::before { transform: translateX(0); }
+  .hero-cta span { position: relative; z-index: 1; }
+
+  /* ── SECTION BASE ── */
+  section { padding: 96px 48px; }
+
+  .section-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--black);
+    margin-bottom: 20px;
+  }
+
+  .section-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+
+  .divider-line {
+    width: 48px;
+    height: 1px;
+    background: var(--gold);
+  }
+
+  .divider-dot {
+    width: 4px; height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  /* ── CREDENTIALS ── */
+  .credentials {
+    background: var(--black);
+    color: var(--white);
+    padding: 40px 48px;
+  }
+
+  .credentials-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 32px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .credential-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    white-space: nowrap;
+  }
+
+  .credential-pill::before {
+    content: '✦';
+    color: var(--gold);
+    font-size: 9px;
+  }
+
+  /* ── MISSION ── */
+  .mission {
+    background: var(--white);
+    padding: 96px 48px;
+  }
+
+  .mission-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .mission-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    margin-bottom: 64px;
+    align-items: start;
+  }
+
+  .mission-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 16px;
+  }
+
+  .mission-block p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--grey);
+  }
+
+  .mission-divider {
+    width: 1px;
+    background: var(--mint-light);
+    align-self: stretch;
+  }
+
+  .commitments {
+    border-top: 1px solid var(--mint-light);
+    padding-top: 56px;
+  }
+
+  .commitments-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 36px;
+    text-align: center;
+  }
+
+  .commitments-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .commitment-card {
+    background: var(--black);
+    padding: 44px 36px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+
+  .commitment-card:hover {
+    background: #222;
+  }
+
+  .commitment-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+
+  .commitment-card:hover::after {
+    transform: scaleX(1);
+  }
+
+  .commitment-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: rgba(201,169,110,0.25);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .commitment-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .commitment-card p {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.6);
+  }
+
+  @media (max-width: 768px) {
+    .mission-top { grid-template-columns: 1fr; gap: 36px; }
+    .mission-divider { display: none; }
+    .commitments-grid { grid-template-columns: 1fr; }
+    .mission { padding: 64px 24px; }
+  }
+
+  /* ── SERVICES ── */
+  .services {
+    background: var(--grey-light);
+  }
+
+  .services-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2px;
+    margin-top: 0;
+  }
+
+  .service-card {
+    background: var(--white);
+    padding: 44px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    border-top: 3px solid transparent;
+  }
+
+  .service-card:hover {
+    border-top-color: var(--gold);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  }
+
+  .service-icon {
+    font-size: 28px;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .service-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .service-card p {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--grey);
+  }
+
+  .service-card .service-tag {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--mint-dark);
+  }
+
+  /* ── SERVICE BUTTON ── */
+  .service-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 24px;
+    background: transparent;
+    border: 1px solid var(--black);
+    color: var(--black);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s;
+    width: 100%;
+    text-align: center;
+  }
+  .service-btn:hover { background: var(--black); color: var(--white); }
+
+  /* ── MODAL ── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10,10,10,0.75);
+    z-index: 500;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    backdrop-filter: blur(4px);
+  }
+  .modal-overlay.active { display: flex; }
+
+  .modal {
+    background: var(--white);
+    max-width: 680px;
+    width: 100%;
+    max-height: 88vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalIn 0.3s ease both;
+  }
+
+  @keyframes modalIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .modal-header {
+    background: var(--black);
+    padding: 28px 36px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .modal-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .modal-header h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--white);
+  }
+  .modal-close {
+    position: absolute;
+    top: 18px; right: 24px;
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.5);
+    font-size: 22px;
+    cursor: pointer;
+    transition: color 0.2s;
+    line-height: 1;
+  }
+  .modal-close:hover { color: var(--white); }
+
+  .modal-body { padding: 32px 36px; }
+
+  .modal-intro {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: var(--grey);
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .fields-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+
+  .field-list { list-style: none; margin-bottom: 20px; }
+  .field-list li {
+    display: flex;
+    gap: 12px;
+    padding: 9px 0;
+    border-bottom: 1px solid #f5f5f5;
+    font-size: 13px;
+    color: var(--charcoal);
+    font-weight: 300;
+    line-height: 1.5;
+    align-items: baseline;
+  }
+  .field-list li::before {
+    content: '✦';
+    color: var(--gold);
+    font-size: 8px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .field-list li strong {
+    font-weight: 600;
+    color: var(--black);
+    min-width: 160px;
+    flex-shrink: 0;
+  }
+
+  .modal-note {
+    background: var(--grey-light);
+    padding: 14px 18px;
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--grey);
+    line-height: 1.7;
+    margin-top: 20px;
+  }
+  .modal-note strong { color: var(--black); font-weight: 600; }
+
+  .modal-cta {
+    display: block;
+    width: 100%;
+    margin-top: 24px;
+    padding: 15px;
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.25s;
+  }
+  .modal-cta:hover { background: var(--gold); color: var(--black); }
+
+  /* ── ABOUT ── */
+  .about {
+    background: var(--white);
+  }
+
+  .about-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .about-text p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.9;
+    color: var(--grey);
+    margin-bottom: 20px;
+  }
+
+  .about-text p strong {
+    color: var(--black);
+    font-weight: 500;
+  }
+
+  .client-list {
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid var(--mint-light);
+  }
+
+  .client-list h4 {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .client-list ul {
+    list-style: none;
+  }
+
+  .client-list li {
+    font-size: 14px;
+    font-weight: 300;
+    color: var(--charcoal);
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .client-list li::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .about-credentials {
+    background: var(--grey-light);
+    padding: 40px;
+  }
+
+  .about-credentials h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 28px;
+  }
+
+  .cred-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: flex-start;
+  }
+
+  .cred-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--black);
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .cred-item h5 {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 4px;
+    letter-spacing: 0.05em;
+  }
+
+  .cred-item p {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--grey);
+    line-height: 1.5;
+  }
+
+  .experience-bar {
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+  }
+
+  .exp-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 300;
+    color: var(--black);
+    line-height: 1;
+  }
+
+  .exp-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 4px;
+  }
+
+  /* ── CONTACT ── */
+  .contact {
+    background: linear-gradient(135deg, var(--black) 0%, #2a2a2a 100%);
+    color: var(--white);
+  }
+
+  .contact-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contact .section-title {
+    color: var(--white);
+  }
+
+  .contact-intro {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.65);
+    max-width: 600px;
+    margin: 0 auto 48px;
+  }
+
+  .jotform-wrapper {
+    background: var(--white);
+    padding: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .jotform-wrapper iframe {
+    width: 100%;
+    border: none;
+    min-height: 600px;
+    display: block;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0d0d0d;
+    padding: 40px 48px;
+    text-align: center;
+  }
+
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+
+  .footer-tagline {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .footer-copy {
+    font-size: 11px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.3);
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    section { padding: 64px 24px; }
+    .credentials { padding: 32px 24px; }
+    .about-inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero { padding: 100px 24px 60px; }
+    footer { padding: 32px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#home"><img src="https://raw.githubusercontent.com/adcconsultingsolutions/adcconsultingsolutions.github.io/main/logo.png" alt="ADC Consulting Solutions LLC" class="nav-logo"></a>
+  <ul class="nav-links">
+    <li><a href="#mission">Mission</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <img src="https://raw.githubusercontent.com/adcconsultingsolutions/adcconsultingsolutions.github.io/main/logo.png" alt="ADC Consulting Solutions LLC" style="height:120px; width:auto; margin-bottom:24px; display:block; margin-left:auto; margin-right:auto;">
+    <div class="hero-ornament">
+      <div class="ornament-line"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-line right"></div>
+    </div>
+    <div class="hero-badge">Human Services · Housing · Education</div>
+    <h1>ADC <em>Consulting</em><br>Solutions LLC</h1>
+    <div class="hero-tagline">Everything Done Ethically</div>
+    <p class="hero-bio">Professional consulting grounded in 19+ years of human services expertise — specializing in housing with services, program design, contract compliance, and workforce development.</p>
+    <a href="#contact" class="hero-cta"><span>Request a Consultation</span></a>
+  </div>
+</section>
+
+<!-- CREDENTIALS BAR -->
+<div class="credentials">
+  <div class="credentials-inner">
+    <div class="credential-pill">Licensed Social Worker (LSW)</div>
+    <div class="credential-pill">Board Approved Supervisor</div>
+    <div class="credential-pill">Certified Professional Project Manager (CPPM)</div>
+    <div class="credential-pill">Scrum Master</div>
+    <div class="credential-pill">HUD HQS Inspector</div>
+    <div class="credential-pill">NSPIRE Certified</div>
+    <div class="credential-pill">Special Education K–12 (EBD/LD)</div>
+    <div class="credential-pill">CERT Certified</div>
+  </div>
+</div>
+
+<!-- MISSION & VISION -->
+<section class="mission" id="mission">
+  <div class="mission-inner">
+    <div class="fade-in" style="text-align:center; margin-bottom:56px;">
+      <div class="section-label">Who We Are</div>
+      <h2 class="section-title">Mission & Vision</h2>
+      <div class="section-divider" style="justify-content:center;">
+        <div class="divider-line"></div>
+        <div class="divider-dot"></div>
+      </div>
+    </div>
+
+    <div class="mission-top">
+      <div class="mission-block fade-in">
+        <h3>Our Mission</h3>
+        <p>ADC Consulting Solutions LLC is a mission-driven consulting practice dedicated to expanding access to quality, affordable housing through expert guidance, strategic partnership, and ethical practice. Drawing on 20+ years of housing expertise — as a Licensed Social Worker, Certified HUD HQS Inspector, and NSPIRE-certified professional — we bring a rare combination of operational knowledge, compliance proficiency, and community insight to every engagement. Our clients are at the center of everything we do — we listen first, tailor every solution to your specific needs, and measure our success by your outcomes.</p>
+      </div>
+      <div class="mission-block fade-in">
+        <h3>Our Vision</h3>
+        <p>Our vision is a future where every individual and family — including those facing barriers to stability — has access to safe, stable, and affordable housing. We partner with organizations that share this commitment, equipping them with the tools, knowledge, and strategic support to turn that vision into measurable community impact.</p>
+      </div>
+    </div>
+
+    <div class="commitments fade-in">
+      <div class="commitments-label">Our Three Core Commitments</div>
+      <div class="commitments-grid">
+        <div class="commitment-card">
+          <div class="commitment-number">01</div>
+          <h4>Client-Centered Practice</h4>
+          <p>Your priorities drive our work. We build solutions around your organizational strengths, your population, and your mission — because no two clients are the same.</p>
+        </div>
+        <div class="commitment-card">
+          <div class="commitment-number">02</div>
+          <h4>Results-Focused Delivery</h4>
+          <p>We set clear goals, track progress, and hold ourselves accountable to measurable outcomes at every stage of every engagement.</p>
+        </div>
+        <div class="commitment-card">
+          <div class="commitment-number">03</div>
+          <h4>Community Impact</h4>
+          <p>We measure success not just by program metrics, but by the stability, safety, and opportunity created for the residents and communities you serve.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-inner">
+    <div class="fade-in">
+      <div class="section-label">What We Offer</div>
+      <h2 class="section-title">Professional<br>Consulting Services</h2>
+      <div class="section-divider">
+        <div class="divider-line"></div>
+        <div class="divider-dot"></div>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <span class="service-icon">🏠</span>
+        <h3>Housing & Human Services Consulting</h3>
+        <p>Expert guidance in site-based and scattered-site housing models. Program startup, design, redesign, and operational support for housing with services providers.</p>
+        <span class="service-tag">Site-Based · Scattered Site</span>
+        <button class="service-btn" onclick="openModal('housing')">Request This Service</button>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">📋</span>
+        <h3>Program Management & Operations</h3>
+        <p>Certified project management support including program evaluation, contract compliance, SOP development, and process improvement across human services organizations.</p>
+        <span class="service-tag">CPPM · Scrum Master</span>
+        <button class="service-btn" onclick="openModal('program')">Request This Service</button>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">🔍</span>
+        <h3>HUD HQS & NSPIRE Inspections</h3>
+        <p>Licensed HUD Housing Quality Standards (HQS) inspections conducted in person or virtually. NSPIRE certified for comprehensive property assessment and compliance support.</p>
+        <span class="service-tag">In-Person · Virtual</span>
+        <button class="service-btn" onclick="openModal('inspection')">Request This Service</button>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">⚖️</span>
+        <h3>Licensed Social Work Supervision</h3>
+        <p>MN Board-approved LSW supervision for social work candidates working toward licensure. Individualized supervision grounded in ethical practice and professional development.</p>
+        <span class="service-tag">LSW · Board Approved</span>
+        <button class="service-btn" onclick="openModal('supervision')">Request This Service</button>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">🎓</span>
+        <h3>Training & Workforce Development</h3>
+        <p>Professional training for housing and human services staff. Topics include program compliance, documentation standards, trauma-informed approaches, and more.</p>
+        <span class="service-tag">Workshops · Coaching</span>
+        <button class="service-btn" onclick="openModal('training')">Request This Service</button>
+      </div>
+      <div class="service-card fade-in">
+        <span class="service-icon">📚</span>
+        <h3>Special Education Consulting (K–12)</h3>
+        <p>Consulting support for educators and organizations working with students with Emotional Behavioral Disorders (EBD) and Learning Disabilities (LD), K–12.</p>
+        <span class="service-tag">EBD · LD · K–12</span>
+        <button class="service-btn" onclick="openModal('speced')">Request This Service</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MODALS -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModalOutside(event)">
+  <div class="modal" id="modal-box">
+    <div class="modal-header">
+      <div class="modal-label" id="modal-label"></div>
+      <h3 id="modal-title"></h3>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-intro" id="modal-intro"></p>
+      <div class="fields-label">Information We'll Need From You</div>
+      <ul class="field-list" id="modal-fields"></ul>
+      <div class="modal-note" id="modal-note"></div>
+      <a href="#contact" class="modal-cta" onclick="closeModal()">Complete Your Request via Consultation Form ↓</a>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="fade-in">
+      <div class="section-label">About ADC</div>
+      <h2 class="section-title">19+ Years of<br>Ethical Practice</h2>
+      <div class="section-divider">
+        <div class="divider-line"></div>
         <div class="divider-dot"></div>
       </div>
       <div class="about-text">
