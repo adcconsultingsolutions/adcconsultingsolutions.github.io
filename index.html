@@ -474,6 +474,32 @@
     color: var(--mint-dark);
   }
 
+  /* ── SERVICE CERT LOGOS ── */
+  .service-cert-logos {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+
+  .service-cert-logos img {
+    height: 36px;
+    width: auto;
+    max-width: 110px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    filter: grayscale(20%) contrast(0.9);
+    opacity: 0.85;
+    transition: opacity 0.2s;
+  }
+
+  .service-cert-logos img:hover {
+    opacity: 1;
+    filter: none;
+    mix-blend-mode: normal;
+  }
+
   /* ── SERVICE BUTTON ── */
   .service-btn {
     display: inline-block;
@@ -931,7 +957,7 @@
     <div class="credential-pill">HUD HQS Inspector</div>
     <div class="credential-pill">NSPIRE Certified</div>
     <div class="credential-pill">Special Education K–12 (EBD/LD)</div>
-    <div class="credential-pill">CERT Certified</div>
+    <div class="credential-pill">CERT Certified · SBE/ESBE/WBE/MBE</div>
   </div>
 </div>
 
@@ -1011,6 +1037,10 @@
         <span class="service-icon">🔍</span>
         <h3>HUD HQS & NSPIRE Inspections</h3>
         <p>Licensed HUD Housing Quality Standards (HQS) inspections conducted in person or virtually. NSPIRE certified for comprehensive property assessment and compliance support.</p>
+        <div class="service-cert-logos">
+          <img src="https://raw.githubusercontent.com/adcconsultingsolutions/adcconsultingsolutions.github.io/main/hqs-logo.png" alt="HUD Housing Quality Standards">
+          <img src="https://raw.githubusercontent.com/adcconsultingsolutions/adcconsultingsolutions.github.io/main/nspire-logo.png" alt="NSPIRE">
+        </div>
         <span class="service-tag">In-Person · Virtual</span>
         <button class="service-btn" onclick="openModal('inspection')">Request This Service</button>
       </div>
@@ -1068,9 +1098,9 @@
         <div class="divider-dot"></div>
       </div>
       <div class="about-text">
-        <p>I offer professional consulting as a <strong>human services professional</strong> with deep expertise in housing with services — across both site-based and scattered site models. My work centers on helping organizations build, refine, and sustain programs that truly serve people.</p>
-        <p>My areas of specialty include <strong>program startup, design, redesign, contract compliance, and evaluation</strong>. I am also a licensed HUD Housing Quality Standards (HQS) Inspector, bringing a unique blend of clinical, operational, and regulatory expertise.</p>
-        <p>I hold a Minnesota Licensed Social Worker (LSW) credential and am a MN Board-approved clinical supervisor. Professional references are available upon request.</p>
+        <p>ADC Consulting Solutions provides professional consulting services specializing in <strong>human services, supportive housing, and Housing with Services programs</strong> across both site-based and scattered-site models. Our work centers on helping organizations develop, strengthen, and sustain high-quality programs that create meaningful and lasting community impact.</p>
+        <p>We partner with agencies, providers, and organizations to support <strong>program startup, strategic design and redesign, contract compliance, quality assurance, and program evaluation</strong> — combining operational excellence, regulatory knowledge, and person-centered practices to help organizations achieve both compliance and service goals.</p>
+        <p>Our team brings expertise in <strong>HUD Housing Quality Standards (HQS) inspections</strong> and a comprehensive understanding of housing regulations, program operations, and service delivery systems. ADC Consulting Solutions holds Minnesota Licensed Social Worker (LSW) credentials and Board-approved clinical supervision expertise, offering clients a unique blend of clinical insight, leadership, and systems-level experience.</p>
       </div>
       <div class="client-list">
         <h4>Selected Clients</h4>
@@ -1126,8 +1156,8 @@
       <div class="cred-item">
         <div class="cred-icon">🛡️</div>
         <div>
-          <h5>CERT Certified</h5>
-          <p>Community Emergency Response Team certified professional.</p>
+          <h5>CERT Certified — SBE/ESBE/WBE/MBE</h5>
+          <p>Certified through the Central Certification Program (CERT) as a Small, Emerging Small, Women, and Minority Business Enterprise, sponsored by Hennepin County, Ramsey County, and the City of Saint Paul.</p>
         </div>
       </div>
       <div class="experience-bar">
