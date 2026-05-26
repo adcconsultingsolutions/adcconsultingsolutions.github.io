@@ -56,11 +56,11 @@
   .hero-tagline { font-size: 11px; font-weight: 500; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin: 20px 0 12px; }
   .hero-bio { font-size: 15px; font-weight: 300; line-height: 1.85; color: var(--grey); max-width: 660px; margin: 0 auto 36px; }
   .hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-  .hero-cta-primary { display: inline-block; padding: 14px 40px; background: var(--black); color: var(--white); font-size: 11px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; position: relative; overflow: hidden; }
+  .hero-cta-primary { display: inline-block; padding: 14px 32px; background: var(--black); color: var(--white); font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; position: relative; overflow: hidden; }
   .hero-cta-primary::before { content: ''; position: absolute; inset: 0; background: var(--gold); transform: translateX(-100%); transition: transform 0.3s ease; }
   .hero-cta-primary:hover::before { transform: translateX(0); }
   .hero-cta-primary span { position: relative; z-index: 1; }
-  .hero-cta-secondary { display: inline-block; padding: 13px 40px; background: transparent; color: var(--black); border: 1px solid var(--black); font-size: 11px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; }
+  .hero-cta-secondary { display: inline-block; padding: 13px 32px; background: transparent; color: var(--black); border: 1px solid var(--black); font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; }
   .hero-cta-secondary:hover { background: var(--black); color: var(--white); }
 
   /* SECTION BASE */
@@ -142,9 +142,10 @@
   .service-card { background: var(--white); padding: 44px 40px; position: relative; overflow: hidden; transition: all 0.3s; border-top: 3px solid transparent; display: flex; flex-direction: column; }
   .service-card:hover { border-top-color: var(--gold); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
   .service-icon { font-size: 28px; margin-bottom: 20px; display: block; }
-  .service-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: var(--black); margin-bottom: 12px; line-height: 1.3; }
+  .service-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: var(--mint-dark); margin-bottom: 12px; line-height: 1.3; }
   .service-card p { font-size: 13px; font-weight: 300; line-height: 1.8; color: var(--grey); }
   .service-body { flex: 1; }
+  .service-tag { display: inline-block; margin-top: 16px; font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mint-dark); }
   .service-divider { border: none; border-top: 1px solid var(--mint-light); margin: 20px 0; }
   .service-sub-label { font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; display: block; }
   .service-btn { display: inline-block; margin-top: 24px; padding: 10px 24px; background: transparent; border: 1px solid var(--black); color: var(--black); font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; transition: all 0.25s; width: 100%; text-align: center; text-decoration: none; }
@@ -215,7 +216,6 @@
     .commitments-grid { grid-template-columns: 1fr; }
     .approach-grid { grid-template-columns: 1fr 1fr; }
     .hero { padding: 100px 24px 60px; }
-    .hero-ctas { flex-direction: column; align-items: center; }
     .leadership-card { grid-template-columns: 1fr; gap: 36px; padding: 36px 24px; }
     .leader-photo { aspect-ratio: 1/1; }
     .footer-inner { grid-template-columns: 1fr; gap: 32px; }
@@ -257,7 +257,6 @@
     <p class="hero-bio">ADC Consulting Solutions helps organizations transform human services and housing programs through innovative design, compliance excellence, and person-centered strategies. We listen first, tailor every solution, and deliver measurable community impact — because strong programs led by knowledgeable professionals change lives.</p>
     <div class="hero-ctas">
       <a href="#contact" class="hero-cta-primary"><span>Partner With Us</span></a>
-      <a href="https://calendly.com/adcconsultingsolutions/15min" target="_blank" class="hero-cta-secondary">Schedule a Consultation</a>
     </div>
   </div>
 </section>
@@ -365,11 +364,11 @@
     <div class="purpose-grid">
       <div class="purpose-block fade-in">
         <h3>Our Mission</h3>
-        <p>We help organizations build and strengthen person-centered programs through strategic design, compliance expertise, and measurable impact. ADC Consulting Solutions is dedicated to strengthening organizations that serve people across human services, housing, education, and the nonprofit sector — grounded in 20+ years of frontline and leadership expertise, and guided by one standard: Everything Done Ethically.</p>
+        <p>We bring the resources, expertise, and knowledge that organizations need to operate at their best — so they can focus on delivering the services, compliance, and leadership that their communities depend on.</p>
       </div>
       <div class="purpose-block fade-in">
         <h3>Our Vision</h3>
-        <p>A future where every community has access to high-quality, equitable programs that create lasting change. We partner with organizations that share this commitment, equipping them with the tools, knowledge, and strategic support to turn that vision into measurable community impact. We believe strong programs, led by knowledgeable practitioners, change lives.</p>
+        <p>We envision a world where every organization is equipped to deliver high-quality services, every professional has the tools to lead effectively, and every person has access to the stable housing, quality education, and human services they need to thrive.</p>
       </div>
     </div>
     <div class="commitments fade-in">
@@ -392,43 +391,6 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- HOW WE WORK -->
-<section class="approach" id="approach">
-  <div class="approach-inner">
-    <div class="fade-in" style="margin-bottom:48px;">
-      <div class="section-label">Our Approach</div>
-      <h2 class="section-title">How We Work</h2>
-      <div class="section-divider">
-        <div class="divider-line"></div>
-        <div class="divider-dot"></div>
-      </div>
-    </div>
-    <div class="approach-grid">
-      <div class="approach-card fade-in">
-        <div class="approach-number">01</div>
-        <h4>We Listen First</h4>
-        <p>Understanding your organization's needs, goals, and challenges before recommending any solution.</p>
-      </div>
-      <div class="approach-card fade-in">
-        <div class="approach-number">02</div>
-        <h4>We Tailor Solutions</h4>
-        <p>No one-size-fits-all strategies. Every engagement is designed around your specific context, population, and mission.</p>
-      </div>
-      <div class="approach-card fade-in">
-        <div class="approach-number">03</div>
-        <h4>We Partner With You</h4>
-        <p>Collaborative, responsive support at every stage. We work alongside your team, not just for them.</p>
-      </div>
-      <div class="approach-card fade-in">
-        <div class="approach-number">04</div>
-        <h4>We Deliver Results</h4>
-        <p>Measurable, meaningful outcomes grounded in both compliance excellence and genuine community impact.</p>
-      </div>
-    </div>
-    <div class="approach-closing fade-in">We measure our success by the results you achieve.</div>
   </div>
 </section>
 
@@ -522,6 +484,43 @@
   </div>
 </section>
 
+<!-- HOW WE WORK -->
+<section class="approach" id="approach">
+  <div class="approach-inner">
+    <div class="fade-in" style="margin-bottom:48px;">
+      <div class="section-label">Our Approach</div>
+      <h2 class="section-title">How We Work</h2>
+      <div class="section-divider">
+        <div class="divider-line"></div>
+        <div class="divider-dot"></div>
+      </div>
+    </div>
+    <div class="approach-grid">
+      <div class="approach-card fade-in">
+        <div class="approach-number">01</div>
+        <h4>We Listen First</h4>
+        <p>Understanding your organization's needs, goals, and challenges before recommending any solution.</p>
+      </div>
+      <div class="approach-card fade-in">
+        <div class="approach-number">02</div>
+        <h4>We Tailor Solutions</h4>
+        <p>No one-size-fits-all strategies. Every engagement is designed around your specific context, population, and mission.</p>
+      </div>
+      <div class="approach-card fade-in">
+        <div class="approach-number">03</div>
+        <h4>We Partner With You</h4>
+        <p>Collaborative, responsive support at every stage. We work alongside your team, not just for them.</p>
+      </div>
+      <div class="approach-card fade-in">
+        <div class="approach-number">04</div>
+        <h4>We Deliver Results</h4>
+        <p>Measurable, meaningful outcomes grounded in both compliance excellence and genuine community impact.</p>
+      </div>
+    </div>
+    <div class="approach-closing fade-in">We measure our success by the results you achieve.</div>
+  </div>
+</section>
+
 <!-- LEADERSHIP -->
 <section class="leadership" id="leadership">
   <div class="leadership-inner">
@@ -545,7 +544,7 @@
           <p>Antonia D. Coleman is a senior human services and housing leader with more than 20 years of experience across nonprofit, municipal, and public housing authority environments. Her path into this work was not accidental. As a young mother who worked through college, Antonia found herself alongside people navigating the same systems she was studying. She saw firsthand that access to resources mattered, but it was the knowledge and genuine commitment of the person delivering the service that made the lasting difference.</p>
           <p>Her brother's experience with special needs drew her into special education, where she learned early that meeting people where they are, and knowing how to serve them well, is not a nicety. It is the foundation of effective practice. That conviction has carried through every role she has held since, from direct service to executive leadership.</p>
           <p>Antonia founded ADC Consulting Solutions on the belief that strong programs, built by professionals who truly know the work, change lives and communities. Every engagement reflects that standard.</p>
-          <p style="margin-top:28px; font-family:'Cormorant Garamond', serif; font-size:28px; font-weight:400; color:var(--black); font-style:italic; letter-spacing:0.03em;">Antonia D. Coleman, LSW, CPPM</p>
+          <p style="margin-top:28px; font-family:'Cormorant Garamond', serif; font-size:20px; font-weight:400; color:var(--charcoal); font-style:italic; letter-spacing:0.03em;">Antonia D. Coleman, LSW, CPPM</p>
         </div>
 
       </div>
