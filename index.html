@@ -33,10 +33,7 @@
   }
   .nav-logo { height: 52px; width: auto; display: block; }
   .nav-links { display: flex; gap: 36px; list-style: none; }
-  .nav-links a {
-    font-size: 11px; font-weight: 500; letter-spacing: 0.18em;
-    text-transform: uppercase; color: var(--charcoal); text-decoration: none; transition: color 0.2s;
-  }
+  .nav-links a { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--charcoal); text-decoration: none; transition: color 0.2s; }
   .nav-links a:hover { color: var(--gold); }
 
   /* HERO */
@@ -46,16 +43,8 @@
     background: linear-gradient(165deg, #f9f9f9 0%, var(--mint-light) 40%, #f0ece4 100%);
     position: relative; overflow: hidden;
   }
-  .hero::before {
-    content: ''; position: absolute; top: -120px; right: -120px;
-    width: 500px; height: 500px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(168,200,190,0.25) 0%, transparent 70%); pointer-events: none;
-  }
-  .hero::after {
-    content: ''; position: absolute; bottom: -80px; left: -80px;
-    width: 400px; height: 400px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(201,169,110,0.12) 0%, transparent 70%); pointer-events: none;
-  }
+  .hero::before { content: ''; position: absolute; top: -120px; right: -120px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(168,200,190,0.25) 0%, transparent 70%); pointer-events: none; }
+  .hero::after { content: ''; position: absolute; bottom: -80px; left: -80px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(201,169,110,0.12) 0%, transparent 70%); pointer-events: none; }
   .hero-inner { position: relative; z-index: 1; max-width: 780px; animation: fadeUp 1s ease both; }
   .hero-ornament { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 32px; }
   .ornament-line { width: 80px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold)); }
@@ -66,11 +55,7 @@
   .hero h1 em { font-style: italic; color: var(--mint-dark); }
   .hero-tagline { font-size: 11px; font-weight: 500; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin: 16px 0 28px; }
   .hero-bio { font-size: 15px; font-weight: 300; line-height: 1.85; color: var(--grey); max-width: 640px; margin: 0 auto 40px; }
-  .hero-cta {
-    display: inline-block; padding: 14px 44px; background: var(--black); color: var(--white);
-    font-size: 11px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase;
-    text-decoration: none; transition: all 0.3s; position: relative; overflow: hidden;
-  }
+  .hero-cta { display: inline-block; padding: 14px 44px; background: var(--black); color: var(--white); font-size: 11px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; transition: all 0.3s; position: relative; overflow: hidden; }
   .hero-cta::before { content: ''; position: absolute; inset: 0; background: var(--gold); transform: translateX(-100%); transition: transform 0.3s ease; }
   .hero-cta:hover::before { transform: translateX(0); }
   .hero-cta span { position: relative; z-index: 1; }
@@ -110,50 +95,23 @@
   .services { background: var(--grey-light); }
   .services-inner { max-width: 1100px; margin: 0 auto; }
   .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2px; }
-  .service-card { background: var(--white); padding: 44px 40px; position: relative; overflow: hidden; transition: all 0.3s; border-top: 3px solid transparent; }
+  .service-card { background: var(--white); padding: 44px 40px; position: relative; overflow: hidden; transition: all 0.3s; border-top: 3px solid transparent; display: flex; flex-direction: column; }
   .service-card:hover { border-top-color: var(--gold); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
   .service-icon { font-size: 28px; margin-bottom: 20px; display: block; }
   .service-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 500; color: var(--black); margin-bottom: 12px; line-height: 1.3; }
   .service-card p { font-size: 13px; font-weight: 300; line-height: 1.8; color: var(--grey); }
+  .service-card .service-body { flex: 1; }
   .service-tag { display: inline-block; margin-top: 16px; font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mint-dark); }
-  .service-cert-logos { display: flex; align-items: center; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
-  .service-cert-logos img { height: 36px; width: auto; max-width: 110px; object-fit: contain; mix-blend-mode: multiply; filter: grayscale(20%) contrast(0.9); opacity: 0.85; transition: opacity 0.2s; }
-  .service-cert-logos img:hover { opacity: 1; filter: none; mix-blend-mode: normal; }
-  .service-btn { display: inline-block; margin-top: 20px; padding: 10px 24px; background: transparent; border: 1px solid var(--black); color: var(--black); font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; transition: all 0.25s; width: 100%; text-align: center; }
+  .service-btn { display: inline-block; margin-top: 20px; padding: 10px 24px; background: transparent; border: 1px solid var(--black); color: var(--black); font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; transition: all 0.25s; width: 100%; text-align: center; text-decoration: none; }
   .service-btn:hover { background: var(--black); color: var(--white); }
-
-  /* MODAL */
-  .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(10,10,10,0.75); z-index: 500; align-items: center; justify-content: center; padding: 24px; backdrop-filter: blur(4px); }
-  .modal-overlay.active { display: flex; }
-  .modal { background: var(--white); max-width: 680px; width: 100%; max-height: 88vh; overflow-y: auto; position: relative; animation: modalIn 0.3s ease both; }
-  @keyframes modalIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-  .modal-header { background: var(--black); padding: 28px 36px; position: sticky; top: 0; z-index: 10; }
-  .modal-label { font-size: 10px; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
-  .modal-header h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 400; color: var(--white); }
-  .modal-close { position: absolute; top: 18px; right: 24px; background: none; border: none; color: rgba(255,255,255,0.5); font-size: 22px; cursor: pointer; transition: color 0.2s; line-height: 1; }
-  .modal-close:hover { color: var(--white); }
-  .modal-body { padding: 32px 36px; }
-  .modal-intro { font-size: 13px; font-weight: 300; line-height: 1.8; color: var(--grey); margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #eee; }
-  .fields-label { font-size: 10px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
-  .field-list { list-style: none; margin-bottom: 20px; }
-  .field-list li { display: flex; gap: 12px; padding: 9px 0; border-bottom: 1px solid #f5f5f5; font-size: 13px; color: var(--charcoal); font-weight: 300; line-height: 1.5; align-items: baseline; }
-  .field-list li::before { content: '✦'; color: var(--gold); font-size: 8px; flex-shrink: 0; margin-top: 2px; }
-  .field-list li strong { font-weight: 600; color: var(--black); min-width: 160px; flex-shrink: 0; }
-  .modal-note { background: var(--grey-light); padding: 14px 18px; font-size: 12px; font-weight: 300; color: var(--grey); line-height: 1.7; margin-top: 20px; }
-  .modal-note strong { color: var(--black); font-weight: 600; }
-  .modal-cta { display: block; width: 100%; margin-top: 24px; padding: 15px; background: var(--black); color: var(--white); font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; text-align: center; text-decoration: none; border: none; cursor: pointer; transition: background 0.25s; }
-  .modal-cta:hover { background: var(--gold); color: var(--black); }
+  .service-divider { border: none; border-top: 1px solid var(--mint-light); margin: 20px 0; }
+  .service-sub-label { font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; display: block; }
 
   /* ABOUT */
   .about { background: var(--white); }
   .about-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
   .about-text p { font-size: 15px; font-weight: 300; line-height: 1.9; color: var(--grey); margin-bottom: 20px; }
   .about-text p strong { color: var(--black); font-weight: 500; }
-  .orgs-served { margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--mint-light); }
-  .orgs-served h4 { font-size: 10px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
-  .orgs-served ul { list-style: none; }
-  .orgs-served li { font-size: 14px; font-weight: 300; color: var(--charcoal); padding: 8px 0; border-bottom: 1px solid #f0f0f0; display: flex; align-items: center; gap: 10px; }
-  .orgs-served li::before { content: ''; width: 20px; height: 1px; background: var(--gold); flex-shrink: 0; }
 
   /* CREDENTIALS PANEL */
   .about-credentials { background: var(--grey-light); padding: 40px; }
@@ -166,23 +124,13 @@
   .exp-number { font-family: 'Cormorant Garamond', serif; font-size: 64px; font-weight: 300; color: var(--black); line-height: 1; }
   .exp-label { font-size: 10px; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-top: 4px; }
 
-  /* LEADERSHIP / OWNER SECTION */
+  /* LEADERSHIP */
   .leadership { background: var(--grey-light); }
   .leadership-inner { max-width: 1100px; margin: 0 auto; }
-  .leadership-card {
-    display: grid; grid-template-columns: 320px 1fr; gap: 64px; align-items: start;
-    background: var(--white); padding: 56px;
-  }
+  .leadership-card { display: grid; grid-template-columns: 300px 1fr; gap: 64px; align-items: start; background: var(--white); padding: 56px; }
   .leader-photo-wrap { position: relative; }
-  .leader-photo {
-    width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top;
-    display: block;
-  }
-  .leader-photo-accent {
-    position: absolute; bottom: -12px; right: -12px;
-    width: 80px; height: 80px; background: var(--gold); z-index: -1;
-  }
-  .leader-info { padding-top: 8px; }
+  .leader-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center top; display: block; }
+  .leader-photo-accent { position: absolute; bottom: -12px; right: -12px; width: 80px; height: 80px; background: var(--gold); z-index: -1; }
   .leader-name { font-family: 'Cormorant Garamond', serif; font-size: 36px; font-weight: 400; color: var(--black); line-height: 1.1; margin-bottom: 6px; }
   .leader-title { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; }
   .leader-bio p { font-size: 14px; font-weight: 300; line-height: 1.9; color: var(--grey); margin-bottom: 16px; }
@@ -190,13 +138,24 @@
   .leader-credentials { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
   .leader-cred-tag { font-size: 10px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--charcoal); background: var(--grey-light); padding: 6px 14px; }
 
-  /* CONTACT */
+  /* ORGS SERVED */
+  .orgs-section { background: var(--black); padding: 64px 48px; }
+  .orgs-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+  .orgs-section .section-label { color: var(--gold); }
+  .orgs-section .section-title { color: var(--white); }
+  .orgs-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 40px; margin-top: 12px; }
+  .org-name { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.65); letter-spacing: 0.08em; padding: 10px 0; border-bottom: 1px solid rgba(201,169,110,0.2); }
+
+  /* CONSULTATION / CONTACT */
   .contact { background: linear-gradient(135deg, var(--black) 0%, #2a2a2a 100%); color: var(--white); }
   .contact-inner { max-width: 900px; margin: 0 auto; text-align: center; }
   .contact .section-title { color: var(--white); }
   .contact-intro { font-size: 15px; font-weight: 300; line-height: 1.8; color: rgba(255,255,255,0.65); max-width: 600px; margin: 0 auto 48px; }
-  .jotform-wrapper { background: var(--white); padding: 8px; max-width: 800px; margin: 0 auto; }
-  .jotform-wrapper iframe { width: 100%; border: none; min-height: 600px; display: block; }
+  .calendly-wrapper { background: var(--white); padding: 8px; max-width: 800px; margin: 0 auto; }
+  .calendly-wrapper iframe { width: 100%; border: none; min-height: 650px; display: block; }
+  .calendly-placeholder { background: var(--white); max-width: 800px; margin: 0 auto; padding: 60px 40px; text-align: center; }
+  .calendly-placeholder p { font-size: 14px; color: var(--grey); margin-bottom: 20px; }
+  .calendly-placeholder .placeholder-label { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; display: block; }
 
   /* FOOTER */
   footer { background: #0d0d0d; padding: 40px 48px; text-align: center; }
@@ -223,6 +182,7 @@
     footer { padding: 32px 24px; }
     .leadership-card { grid-template-columns: 1fr; gap: 36px; padding: 36px 24px; }
     .leader-photo { aspect-ratio: 1/1; }
+    .orgs-section { padding: 48px 24px; }
   }
 </style>
 </head>
@@ -236,7 +196,7 @@
     <li><a href="#services">Services</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#leadership">Leadership</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact">Free Consultation</a></li>
   </ul>
 </nav>
 
@@ -252,8 +212,8 @@
     <div class="hero-badge">Human Services · Housing · Education</div>
     <h1>ADC <em>Consulting</em><br>Solutions LLC</h1>
     <div class="hero-tagline">Everything Done Ethically</div>
-    <p class="hero-bio">Professional consulting grounded in 20+ years of human services expertise, specializing in housing with services, program design, contract compliance, and workforce development.</p>
-    <a href="#contact" class="hero-cta"><span>Request a Consultation</span></a>
+    <p class="hero-bio">Professional consulting grounded in 20+ years of frontline and leadership expertise across human services, housing, education, and nonprofit sectors — specializing in program design, contract compliance, and workforce development.</p>
+    <a href="#contact" class="hero-cta"><span>Book a Free Consultation</span></a>
   </div>
 </section>
 
@@ -286,11 +246,11 @@
     <div class="mission-top">
       <div class="mission-block fade-in">
         <h3>Our Mission</h3>
-        <p>ADC Consulting Solutions LLC is a mission-driven consulting practice dedicated to expanding access to quality, affordable housing through expert guidance, strategic partnership, and ethical practice. Drawing on 20+ years of housing and human services expertise, we bring a rare combination of operational knowledge, compliance proficiency, and community insight to every engagement. Our clients are at the center of everything we do. We listen first, tailor every solution to your specific needs, and measure our success by your outcomes.</p>
+        <p>ADC Consulting Solutions is a mission-driven consulting practice dedicated to strengthening organizations that serve people. We bring 20+ years of frontline and leadership expertise across human services and housing to help agencies, government entities, nonprofits, and community partners build programs that are compliant, sustainable, and centered around the people they serve. We listen first, tailor every solution to your specific needs, and measure our success by your outcomes.</p>
       </div>
       <div class="mission-block fade-in">
         <h3>Our Vision</h3>
-        <p>Our vision is a future where every individual and family, including those facing barriers to stability, has access to safe, stable, and affordable housing. We partner with organizations that share this commitment, equipping them with the tools, knowledge, and strategic support to turn that vision into measurable community impact. We believe that strong programs, led by knowledgeable practitioners, change lives.</p>
+        <p>Our vision is a future where every individual and family, including those facing barriers to stability, has access to the services, support, and opportunities they need to thrive. We partner with organizations that share this commitment, equipping them with the tools, knowledge, and strategic support to turn that vision into measurable community impact. We believe strong programs, led by knowledgeable practitioners, change lives.</p>
       </div>
     </div>
 
@@ -332,77 +292,71 @@
 
       <div class="service-card fade-in">
         <span class="service-icon">🏠</span>
-        <h3>Housing &amp; Human Services Consulting</h3>
-        <p>Expert guidance in site-based and scattered-site Housing with Services models. We support program startup, strategic design and redesign, contract compliance, quality assurance, and operational improvement for providers navigating complex housing and human services systems.</p>
-        <span class="service-tag">Site-Based · Scattered Site</span>
-        <button class="service-btn" onclick="openModal('housing')">Request This Service</button>
+        <div class="service-body">
+          <h3>Housing &amp; Human Services Consulting</h3>
+          <p>Expert guidance across housing and human services programs. We support program startup, strategic design and redesign, contract compliance, quality assurance, and operational improvement for organizations navigating complex systems and funding requirements.</p>
+          <span class="service-tag">Site-Based · Scattered Site · Program Design</span>
+        </div>
+        <a href="PLACEHOLDER_HOUSING_JOTFORM" target="_blank" class="service-btn">Request This Service</a>
       </div>
 
       <div class="service-card fade-in">
         <span class="service-icon">📋</span>
-        <h3>Program Management &amp; Operations</h3>
-        <p>Certified project management support including program evaluation, contract compliance, SOP development, and process improvement across human services organizations. We help teams build systems that are sustainable, audit-ready, and outcomes-driven.</p>
-        <span class="service-tag">CPPM · Scrum Master</span>
-        <button class="service-btn" onclick="openModal('program')">Request This Service</button>
+        <div class="service-body">
+          <h3>Program Management &amp; Operations</h3>
+          <p>Certified project management support including program evaluation, contract compliance, SOP development, and process improvement. We help teams build systems that are sustainable, audit-ready, and outcomes-driven across human services and housing organizations.</p>
+          <span class="service-tag">CPPM · Scrum Master · SOP · Compliance</span>
+        </div>
+        <a href="PLACEHOLDER_PROGRAM_JOTFORM" target="_blank" class="service-btn">Request This Service</a>
       </div>
 
       <div class="service-card fade-in">
         <span class="service-icon">🔍</span>
-        <h3>HUD HQS &amp; NSPIRE Inspections</h3>
-        <p>Two distinct federally recognized inspection standards, one experienced inspector. HUD Housing Quality Standards (HQS) inspections assess housing unit conditions for voucher program compliance. NSPIRE (National Standards for the Physical Inspection of Real Estate) provides comprehensive property assessment under HUD's updated inspection framework. Both services are available in person and virtually.</p>
-        <div class="service-cert-logos">
-          <img src="https://raw.githubusercontent.com/adcconsultingsolutions/adcconsultingsolutions.github.io/main/hqs-logo.png" alt="HUD Housing Quality Standards">
-          <img src="https://raw.githubusercontent.com/adcconsultingsolutions/adcconsultingsolutions.github.io/main/nspire-logo.png" alt="NSPIRE">
+        <div class="service-body">
+          <h3>HUD HQS &amp; NSPIRE Inspections</h3>
+          <span class="service-sub-label">HUD Housing Quality Standards (HQS)</span>
+          <p>Licensed inspections that assess housing unit conditions for voucher program compliance, including Housing Choice Voucher and project-based programs. Available in person and virtually.</p>
+          <hr class="service-divider">
+          <span class="service-sub-label">NSPIRE</span>
+          <p>Comprehensive property assessments under HUD's updated National Standards for the Physical Inspection of Real Estate framework. Available in person and virtually.</p>
+          <span class="service-tag">In-Person · Virtual · HCV · Project-Based</span>
         </div>
-        <span class="service-tag">In-Person · Virtual</span>
-        <button class="service-btn" onclick="openModal('inspection')">Request This Service</button>
+        <a href="https://form.jotform.com/202817308629156" target="_blank" class="service-btn">Request an Inspection</a>
       </div>
 
       <div class="service-card fade-in">
         <span class="service-icon">⚖️</span>
-        <h3>Licensed Social Work Supervision</h3>
-        <p>Minnesota Board-approved LSW supervision for social work candidates working toward licensure. We also support organizations seeking qualified clinical and program oversight across 245D licensed services, ARMHS, MN CHOICES assessments, and contract-based roles including Travel Case Manager and Qualified Mental Health Professional (QMHP) placements.</p>
-        <span class="service-tag">LSW · Board Approved · 245D · ARMHS</span>
-        <button class="service-btn" onclick="openModal('supervision')">Request This Service</button>
+        <div class="service-body">
+          <h3>Licensed Social Work Services</h3>
+          <p>Minnesota Board-approved LSW supervision for candidates working toward licensure. We also support organizations seeking qualified oversight and contract-based roles across 245D licensed services, ARMHS, MN CHOICES assessments, Travel Case Manager, and Qualified Mental Health Professional (QMHP) placements. Our approach is grounded in both micro and macro-level social work practice.</p>
+          <span class="service-tag">LSW · Board Approved · 245D · ARMHS · QMHP</span>
+        </div>
+        <a href="PLACEHOLDER_LSW_JOTFORM" target="_blank" class="service-btn">Request This Service</a>
       </div>
 
       <div class="service-card fade-in">
         <span class="service-icon">🎓</span>
-        <h3>Training &amp; Workforce Development</h3>
-        <p>Professional training for housing and human services staff. Topics include program compliance, documentation standards, evidence-based practices including the DBT 90-Day Window Model, Dialectical Behavior Therapy (DBT) fundamentals, Mental Health First Aid, Diversity, Equity, Inclusion and Accessibility (DEIA), and trauma-informed approaches.</p>
-        <span class="service-tag">Workshops · Coaching · DBT · MHFA · DEIA</span>
-        <button class="service-btn" onclick="openModal('training')">Request This Service</button>
+        <div class="service-body">
+          <h3>Training &amp; Workforce Development</h3>
+          <p>Professional training for housing and human services teams. Topics include the DBT 90-Day Window Model, Dialectical Behavior Therapy (DBT) fundamentals, Mental Health First Aid, Diversity, Equity, Inclusion and Accessibility (DEIA), program compliance, documentation standards, and trauma-informed approaches.</p>
+          <span class="service-tag">DBT · Mental Health First Aid · DEIA · Compliance</span>
+        </div>
+        <a href="PLACEHOLDER_TRAINING_JOTFORM" target="_blank" class="service-btn">Request This Service</a>
       </div>
 
       <div class="service-card fade-in">
         <span class="service-icon">📚</span>
-        <h3>Special Education Consulting (K–12)</h3>
-        <p>Consulting support for educators and organizations working with students with Emotional Behavioral Disorders (EBD) and Learning Disabilities (LD), K–12. Services include IEP navigation and development support, family advocacy, and system navigation to help families and providers access appropriate educational resources and supports.</p>
-        <span class="service-tag">EBD · LD · IEP · Family Advocacy</span>
-        <button class="service-btn" onclick="openModal('speced')">Request This Service</button>
+        <div class="service-body">
+          <h3>Special Education Consulting (K–12)</h3>
+          <p>Consulting support for educators and organizations working with students with Emotional Behavioral Disorders (EBD) and Learning Disabilities (LD), K–12. Services include IEP navigation and development support, family advocacy, and system navigation to help families and providers access appropriate educational resources.</p>
+          <span class="service-tag">EBD · LD · IEP · Family Advocacy</span>
+        </div>
+        <a href="PLACEHOLDER_SPECED_JOTFORM" target="_blank" class="service-btn">Request This Service</a>
       </div>
 
     </div>
   </div>
 </section>
-
-<!-- MODALS -->
-<div class="modal-overlay" id="modal-overlay" onclick="closeModalOutside(event)">
-  <div class="modal" id="modal-box">
-    <div class="modal-header">
-      <div class="modal-label" id="modal-label"></div>
-      <h3 id="modal-title"></h3>
-      <button class="modal-close" onclick="closeModal()">✕</button>
-    </div>
-    <div class="modal-body">
-      <p class="modal-intro" id="modal-intro"></p>
-      <div class="fields-label">Information We'll Need From You</div>
-      <ul class="field-list" id="modal-fields"></ul>
-      <div class="modal-note" id="modal-note"></div>
-      <a href="#contact" class="modal-cta" onclick="closeModal()">Complete Your Request via Consultation Form ↓</a>
-    </div>
-  </div>
-</div>
 
 <!-- ABOUT -->
 <section class="about" id="about">
@@ -415,17 +369,9 @@
         <div class="divider-dot"></div>
       </div>
       <div class="about-text">
-        <p>ADC Consulting Solutions provides professional consulting services specializing in <strong>human services, supportive housing, and Housing with Services programs</strong> across both site-based and scattered-site models. Our work centers on helping organizations develop, strengthen, and sustain high-quality programs that create meaningful and lasting community impact.</p>
-        <p>We partner with agencies, providers, and organizations to support <strong>program startup, strategic design and redesign, contract compliance, quality assurance, and program evaluation</strong>, combining operational excellence, regulatory knowledge, and person-centered practices to help organizations achieve both compliance and service goals.</p>
-        <p>Our team brings expertise in <strong>HUD Housing Quality Standards (HQS) and NSPIRE inspections</strong> and a comprehensive understanding of housing regulations, program operations, and service delivery systems. ADC Consulting Solutions holds Minnesota Licensed Social Worker (LSW) credentials and Board-approved clinical supervision expertise, offering clients a unique blend of clinical insight, leadership, and systems-level experience.</p>
-      </div>
-      <div class="orgs-served">
-        <h4>Organizations We've Served</h4>
-        <ul>
-          <li>Lutheran Social Service of Minnesota</li>
-          <li>Solid Ground</li>
-          <li>Project for Pride in Living</li>
-        </ul>
+        <p>ADC Consulting Solutions provides professional consulting services specializing in <strong>human services and housing</strong> programs. Our work centers on helping organizations develop, strengthen, and sustain high-quality programs that create meaningful and lasting community impact.</p>
+        <p>We partner with <strong>agencies, government entities, nonprofits, and community partners</strong> to support program startup, strategic design and redesign, contract compliance, quality assurance, and program evaluation. We combine operational excellence, regulatory knowledge, and person-centered practices to help organizations achieve both compliance and service goals.</p>
+        <p>Our team brings 20+ years of <strong>frontline and leadership expertise</strong> across human services, housing, education, and the nonprofit sector, grounded in both micro and macro-level social work practice and a genuine commitment to the communities we serve.</p>
       </div>
     </div>
     <div class="about-credentials fade-in">
@@ -434,42 +380,42 @@
         <div class="cred-icon">⚖️</div>
         <div>
           <h5>Licensed Social Worker (LSW)</h5>
-          <p>Minnesota licensed. Board-approved supervisor for LSW candidates seeking licensure. License #24867, Minnesota Board of Social Work.</p>
+          <p>Minnesota licensed. Board-approved supervisor for LSW candidates seeking licensure.</p>
         </div>
       </div>
       <div class="cred-item">
         <div class="cred-icon">📊</div>
         <div>
           <h5>Certified Professional Project Manager (CPPM)</h5>
-          <p>Certified project management professional with Agile Scrum Master designation, Scrum Alliance.</p>
+          <p>Certified project management professional with Agile Scrum Master designation.</p>
         </div>
       </div>
       <div class="cred-item">
         <div class="cred-icon">🏠</div>
         <div>
           <h5>HUD HQS Inspector</h5>
-          <p>Housing Choice Voucher and Housing Quality Standards Specialist certified through Nan McKay &amp; Associates. Licensed to conduct inspections in person and virtually.</p>
+          <p>Licensed to conduct Housing Quality Standards inspections in person and virtually.</p>
         </div>
       </div>
       <div class="cred-item">
         <div class="cred-icon">🔍</div>
         <div>
           <h5>NSPIRE Certified Inspector</h5>
-          <p>NSPIRE Compliance Inspector certified through the National Center for Housing Management, March 2025.</p>
+          <p>Certified through the National Center for Housing Management, March 2025.</p>
         </div>
       </div>
       <div class="cred-item">
         <div class="cred-icon">🎓</div>
         <div>
           <h5>Special Education License (K–12)</h5>
-          <p>Licensed Minnesota K–12 teacher in Emotional Behavioral Disorders and Learning Disabilities. B.A., Special Education, Augsburg College.</p>
+          <p>Licensed Minnesota K–12 teacher in Emotional Behavioral Disorders and Learning Disabilities.</p>
         </div>
       </div>
       <div class="cred-item">
         <div class="cred-icon">🛡️</div>
         <div>
           <h5>CERT Certified · SBE/ESBE/WBE/MBE</h5>
-          <p>Certified through the Central Certification Program (CERT) as a Small, Emerging Small, Women, and Minority Business Enterprise, sponsored by Hennepin County, Ramsey County, and the City of Saint Paul.</p>
+          <p>Certified through the Central Certification Program as a Small, Emerging Small, Women, and Minority Business Enterprise, sponsored by Hennepin County, Ramsey County, and the City of Saint Paul.</p>
         </div>
       </div>
       <div class="experience-bar">
@@ -493,20 +439,16 @@
     </div>
     <div class="leadership-card fade-in">
       <div class="leader-photo-wrap">
-        <img
-          src="https://raw.githubusercontent.com/adcconsultingsolutions/adcconsultingsolutions.github.io/main/headshot.png"
-          alt="Antonia D. Coleman, LSW, CPPM"
-          class="leader-photo">
+        <img src="https://raw.githubusercontent.com/adcconsultingsolutions/adcconsultingsolutions.github.io/main/headshot.png" alt="Antonia D. Coleman, LSW, CPPM" class="leader-photo">
         <div class="leader-photo-accent"></div>
       </div>
-      <div class="leader-info">
+      <div>
         <div class="leader-name">Antonia D. Coleman</div>
         <div class="leader-title">Founder &amp; Principal Consultant · LSW, CPPM</div>
         <div class="leader-bio">
-          <p>Antonia D. Coleman is a senior human services and housing leader with more than 20 years of experience directing housing stability, homelessness response, and community-based programs across nonprofit, municipal, and public housing authority environments. Her career has been shaped not only by professional expertise, but by a deeply personal understanding of what it means for people to access resources and reach for more.</p>
-          <p>As a young mother who worked through college, Antonia found herself alongside people navigating the same systems she was studying. She saw firsthand that access to resources mattered, but the knowledge and commitment of the person delivering the service was what truly made the difference. That conviction has guided every role she has held since. Her brother's experience with special needs drew her into special education, where she learned early that meeting people where they are, and knowing how to serve them well, is not optional. It is the work.</p>
-          <p>Her areas of expertise span <strong>Housing with Services programs, contract compliance, quality assurance, program design and evaluation, HUD HQS and NSPIRE inspections, and LSW clinical supervision</strong>. She has administered over $1 million in public funds, directed large-scale emergency housing initiatives, and built cross-sector partnerships at the county, city, and state level. She is currently a Program Manager at the Minneapolis Public Housing Authority, overseeing Special Allocations and Project-Based Voucher programs.</p>
-          <p>Antonia founded ADC Consulting Solutions on the belief that strong programs, led by practitioners who truly know the work, change lives. Every engagement reflects that standard.</p>
+          <p>Antonia D. Coleman is a senior human services and housing leader with more than 20 years of experience across nonprofit, municipal, and public housing authority environments. Her path into this work was not accidental. As a young mother who worked through college, Antonia found herself alongside people navigating the same systems she was studying. She saw firsthand that access to resources mattered, but it was the knowledge and genuine commitment of the person delivering the service that made the lasting difference.</p>
+          <p>Her brother's experience with special needs drew her into special education, where she learned early that meeting people where they are, and knowing how to serve them well, is not a nicety. It is the foundation of effective practice. That conviction has carried through every role she has held since, from direct service to executive leadership.</p>
+          <p>Antonia founded ADC Consulting Solutions on the belief that strong programs, built by practitioners who truly know the work, change lives and communities. Every engagement reflects that standard.</p>
         </div>
         <div class="leader-credentials">
           <span class="leader-cred-tag">LSW #24867</span>
@@ -523,27 +465,39 @@
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- FREE CONSULTATION -->
 <section class="contact" id="contact">
   <div class="contact-inner">
     <div class="fade-in">
-      <div class="section-label" style="color:var(--gold);">Get In Touch</div>
-      <h2 class="section-title">Work With Us</h2>
+      <div class="section-label" style="color:var(--gold);">No Cost. No Obligation.</div>
+      <h2 class="section-title">Free Consultation</h2>
       <div class="section-divider" style="justify-content:center;">
         <div class="divider-line"></div>
         <div class="divider-dot"></div>
       </div>
-      <p class="contact-intro">Tell us about your organization and what you are working to accomplish. We will follow up promptly to explore how ADC Consulting Solutions can support your goals.</p>
+      <p class="contact-intro">Schedule a free consultation to tell us about your organization and what you are working to accomplish. We will follow up promptly to explore how ADC Consulting Solutions can support your goals.</p>
     </div>
-    <div class="jotform-wrapper fade-in">
-      <iframe
-        src="https://form.jotform.com/202817308629156"
-        title="ADC Consulting Solutions Contact Form"
-        allowtransparency="true"
-        allow="geolocation; microphone; camera"
-        allowfullscreen
-        scrolling="yes">
-      </iframe>
+    <div class="calendly-wrapper fade-in">
+      <iframe src="https://calendly.com/adcconsultingsolutions" frameborder="0" scrolling="yes"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ORGANIZATIONS SERVED -->
+<section class="orgs-section" id="orgs">
+  <div class="orgs-inner">
+    <div class="fade-in">
+      <div class="section-label">Our Work</div>
+      <h2 class="section-title" style="color:var(--white);">Organizations We've Served</h2>
+      <div class="section-divider" style="justify-content:center;">
+        <div class="divider-line"></div>
+        <div class="divider-dot"></div>
+      </div>
+      <div class="orgs-grid">
+        <div class="org-name">Lutheran Social Service of Minnesota</div>
+        <div class="org-name">Solid Ground</div>
+        <div class="org-name">Project for Pride in Living</div>
+      </div>
     </div>
   </div>
 </section>
@@ -556,7 +510,6 @@
 </footer>
 
 <script>
-  // Scroll fade-in
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -566,122 +519,8 @@
     });
   }, { threshold: 0.12 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-  // Stagger service cards
   document.querySelectorAll('.service-card').forEach((card, i) => {
     card.style.transitionDelay = `${i * 0.08}s`;
-  });
-
-  // Modal data
-  const modalData = {
-    housing: {
-      label: 'Housing & Human Services',
-      title: 'Housing & Human Services Consulting',
-      intro: 'We provide expert guidance across the full program lifecycle for housing with services providers, from initial startup through ongoing compliance and evaluation.',
-      fields: [
-        ['Organization Name', 'Your agency or organization name'],
-        ['Program Type', 'Site-based, scattered-site, or both'],
-        ['Current Stage', 'Startup, redesign, compliance review, or evaluation'],
-        ['Primary Need', 'Brief description of what you are working to address'],
-        ['Timeline', 'When you need support to begin']
-      ],
-      note: 'We serve nonprofit providers, public agencies, and housing authorities across Minnesota and beyond.'
-    },
-    program: {
-      label: 'Program Management',
-      title: 'Program Management & Operations',
-      intro: 'We support human services organizations with certified project management, SOP development, contract compliance, and process improvement.',
-      fields: [
-        ['Organization Name', 'Your agency or organization name'],
-        ['Scope of Support', 'SOP development, compliance review, process improvement, or evaluation'],
-        ['Current Challenges', 'What is not working or what you are trying to improve'],
-        ['Contract Type', 'HUD, DHS, county, or other funding source'],
-        ['Timeline', 'When you need support to begin']
-      ],
-      note: 'Support is available on a project basis or through ongoing consulting arrangements.'
-    },
-    inspection: {
-      label: 'HUD HQS & NSPIRE Inspections',
-      title: 'HUD HQS & NSPIRE Inspections',
-      intro: 'We conduct both HUD Housing Quality Standards (HQS) and NSPIRE inspections in person and virtually. These are two distinct inspection types — let us know which applies to your program.',
-      fields: [
-        ['Organization Name', 'Your agency or organization name'],
-        ['Inspection Type', 'HQS, NSPIRE, or both'],
-        ['Number of Units', 'Approximate number of units to be inspected'],
-        ['Location', 'City or metro area'],
-        ['Preferred Format', 'In-person, virtual, or either'],
-        ['Timeline', 'Preferred inspection dates or urgency']
-      ],
-      note: 'Inspections are available for Housing Choice Voucher programs, project-based programs, and other federally regulated housing.'
-    },
-    supervision: {
-      label: 'Licensed Social Work Supervision',
-      title: 'Licensed Social Work Supervision',
-      intro: 'We offer Minnesota Board-approved LSW supervision and support for organizations seeking qualified clinical and program oversight across a range of contract and placement types.',
-      fields: [
-        ['Your Name or Organization', 'Individual candidate or agency name'],
-        ['Type of Need', 'LSW supervision, 245D oversight, ARMHS, MN CHOICES, QMHP, Travel Case Manager, or other'],
-        ['Current Licensure Status', 'For individual candidates'],
-        ['Setting', 'Program type or service environment'],
-        ['Timeline', 'When supervision or placement support is needed']
-      ],
-      note: 'We support both individual candidates working toward licensure and organizations seeking contract-based clinical and program oversight.'
-    },
-    training: {
-      label: 'Training & Workforce Development',
-      title: 'Training & Workforce Development',
-      intro: 'We deliver professional training for housing and human services teams on a range of evidence-based and compliance-focused topics.',
-      fields: [
-        ['Organization Name', 'Your agency or organization name'],
-        ['Training Topic', 'DBT 90-Day Window Model, Mental Health First Aid, DEIA, program compliance, documentation, trauma-informed care, or other'],
-        ['Audience', 'Role or team to be trained'],
-        ['Group Size', 'Approximate number of participants'],
-        ['Format', 'In-person, virtual, or hybrid'],
-        ['Timeline', 'Preferred dates or urgency']
-      ],
-      note: 'Training can be delivered as a single session, multi-day workshop, or ongoing coaching engagement.'
-    },
-    speced: {
-      label: 'Special Education Consulting',
-      title: 'Special Education Consulting (K–12)',
-      intro: 'We support educators, families, and organizations working with students with EBD and LD, including IEP navigation, family advocacy, and system navigation.',
-      fields: [
-        ['Name or Organization', 'Parent, school, or agency name'],
-        ['Type of Support', 'IEP navigation, family advocacy, system navigation, educator consulting, or other'],
-        ['Student Grade Level', 'Current or anticipated grade'],
-        ['Primary Concern', 'Brief description of the situation or need'],
-        ['Timeline', 'When support is needed']
-      ],
-      note: 'We work with families, schools, and community organizations to ensure students receive appropriate and effective educational supports.'
-    }
-  };
-
-  function openModal(type) {
-    const data = modalData[type];
-    if (!data) return;
-    document.getElementById('modal-label').textContent = data.label;
-    document.getElementById('modal-title').textContent = data.title;
-    document.getElementById('modal-intro').textContent = data.intro;
-    const list = document.getElementById('modal-fields');
-    list.innerHTML = data.fields.map(([label, desc]) =>
-      `<li><strong>${label}</strong>${desc}</li>`
-    ).join('');
-    document.getElementById('modal-note').innerHTML = `<strong>Note:</strong> ${data.note}`;
-    document.getElementById('modal-overlay').classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal() {
-    document.getElementById('modal-overlay').classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  function closeModalOutside(e) {
-    if (e.target === document.getElementById('modal-overlay')) closeModal();
-  }
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
   });
 </script>
 </body>
