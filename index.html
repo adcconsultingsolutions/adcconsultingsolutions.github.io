@@ -662,6 +662,7 @@
     font-weight: 500;
   }
 
+  /* ── CLIENT LOGOS ── */
   .client-list {
     margin-top: 32px;
     padding-top: 32px;
@@ -674,32 +675,32 @@
     letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
 
-  .client-list ul {
-    list-style: none;
-  }
-
-  .client-list li {
-    font-size: 14px;
-    font-weight: 300;
-    color: var(--charcoal);
-    padding: 8px 0;
-    border-bottom: 1px solid #f0f0f0;
+  .client-logos {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 28px;
+    flex-wrap: wrap;
   }
 
-  .client-list li::before {
-    content: '';
-    width: 20px;
-    height: 1px;
-    background: var(--gold);
-    flex-shrink: 0;
+  .client-logos img {
+    height: 44px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+    filter: grayscale(100%) brightness(0.6);
+    opacity: 0.75;
+    transition: filter 0.3s, opacity 0.3s;
   }
 
+  .client-logos img:hover {
+    filter: grayscale(0%) brightness(1);
+    opacity: 1;
+  }
+
+  /* ── CREDENTIALS PANEL ── */
   .about-credentials {
     background: var(--grey-light);
     padding: 40px;
@@ -868,6 +869,8 @@
     .about-inner { grid-template-columns: 1fr; gap: 40px; }
     .hero { padding: 100px 24px 60px; }
     footer { padding: 32px 24px; }
+    .client-logos { gap: 20px; }
+    .client-logos img { height: 36px; max-width: 110px; }
   }
 </style>
 </head>
@@ -1054,11 +1057,17 @@
       </div>
       <div class="client-list">
         <h4>Selected Clients</h4>
-        <ul>
-          <li>Lutheran Social Services</li>
-          <li>Solid Ground</li>
-          <li>Project for Pride in Living</li>
-        </ul>
+        <div class="client-logos">
+          <img
+            src="https://raw.githubusercontent.com/adcconsultingsolutions/adcconsultingsolutions.github.io/main/images/lss-logo.png"
+            alt="Lutheran Social Service of Minnesota">
+          <img
+            src="https://raw.githubusercontent.com/adcconsultingsolutions/adcconsultingsolutions.github.io/main/images/ppl-logo.png"
+            alt="Project for Pride in Living">
+          <img
+            src="https://raw.githubusercontent.com/adcconsultingsolutions/adcconsultingsolutions.github.io/main/images/solid-ground-logo.png"
+            alt="Solid Ground">
+        </div>
       </div>
     </div>
     <div class="about-credentials fade-in">
